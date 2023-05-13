@@ -302,7 +302,6 @@ button {
   flex-direction: column;
   gap: 40px;
   margin-bottom: auto;
-  margin-top: 48px;
 }
 
 .mobile-contacts {
@@ -332,11 +331,19 @@ button {
 .mobile-menu .link {
   display: block;
   padding: 10px;
-  gap: 40px;
   text-decoration: none;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.1;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu .link:focus {
+  color: var(--color-logo);
+}
+
+.active {
+  color: var(--color-logo);
 }
 
 /* main */
@@ -356,6 +363,72 @@ button {
   background-size: cover;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 428px) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/bg-img/Dark-bgmob@1x.jpg);
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/bg-img/Dark-bgmob@2x.jpg);
+    }
+  }
+}
+
+@media only screen and (min-width: 429px) and (max-width: 768px) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/bg-img/Dark-bgtab@1x.jpg);
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/bg-img/Dark-bgtab@2x.jpg);
+    }
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1440px) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/bg-img/people-office.jpg);
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/bg-img/people-office\ 1desk@2x.jpg);
+    }
+  }
 }
 
 .hero-title {
@@ -1122,10 +1195,30 @@ button {
   padding: 96px 0 120px;
 }
 
+@media only screen and (max-width: 1199px) {
+  .portfolio-main {
+    padding: 64px 0 96px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .portfolio-main {
+    padding: 48px 0;
+  }
+}
+
 .portfolio-btn-list {
   justify-content: center;
   margin-bottom: 72px;
   gap: 24px;
+}
+
+@media only screen and (max-width: 767px) {
+  .portfolio-btn-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
 }
 
 .portfolio-list {
@@ -1171,8 +1264,26 @@ button {
   row-gap: 48px;
 }
 
+@media only screen and (max-width: 767px) {
+  .areas-list {
+    flex-direction: column;
+  }
+}
+
 .areas-list-item {
   width: calc((100% - 48px) / 3);
+}
+
+@media only screen and (max-width: 1199px) {
+  .areas-list-item {
+    width: calc((100% - 48px) / 2);
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .areas-list-item {
+    width: calc((100% - 48px) / 1);
+  }
 }
 
 .areas-link {
