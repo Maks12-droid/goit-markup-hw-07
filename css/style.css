@@ -83,7 +83,7 @@ button {
 
 @media only screen and (max-width: 1199px) {
   .addres-list {
-    gap: 0;
+    gap: 12px;
     display: flex;
     flex-direction: column;
   }
@@ -97,13 +97,13 @@ button {
 }
 @media only screen and (min-width: 768px) {
   .container {
-    max-width: 768px;
+    max-width: 766px;
   }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1158px) {
   .container {
-    max-width: 1200px;
+    max-width: 1158px;
   }
 }
 
@@ -270,8 +270,8 @@ button {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   padding: 32px;
   background-color: #fff;
   z-index: 999;
@@ -322,10 +322,24 @@ button {
   margin-bottom: 40px;
 }
 
+@media only screen and (max-width: 427px) {
+  .mobile-tel {
+    font-size: 24px;
+  }
+}
+
 .mobile-social {
   gap: 56px;
   display: flex;
   justify-content: center;
+}
+
+@media only screen and (max-width: 427px) {
+  .mobile-social {
+    display: flex;
+    gap: 30px;
+    justify-content: left;
+  }
 }
 
 .mobile-menu .link {
@@ -356,7 +370,7 @@ button {
       rgba(46, 47, 66, 0.7)
     ),
     url(../images/bg-img/people-office.jpg);
-  padding: 188px 0 188px;
+  padding: 112px 0 112px;
   max-width: 1440px;
   background-repeat: no-repeat;
   background-position: center;
@@ -364,6 +378,8 @@ button {
   margin-left: auto;
   margin-right: auto;
 }
+
+/* 2.14 */
 
 @media only screen and (min-width: 320px) and (max-width: 428px) {
   .hero {
@@ -448,7 +464,6 @@ button {
   .hero-title {
     font-size: 36px;
     line-height: 1.1;
-    width: 320px;
   }
 }
 
@@ -514,7 +529,6 @@ button {
 @media only screen and (max-width: 1199px) {
   .skills-list {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
     gap: 72px 24px;
   }
@@ -525,7 +539,6 @@ button {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    width: 396px;
     gap: 72px;
     padding: revert;
   }
@@ -533,6 +546,12 @@ button {
 
 .skills-item {
   flex-basis: calc((100% - 72px) / 4);
+}
+
+@media only screen and (max-width: 1199px) {
+  .skills-item {
+    flex-basis: calc((100% - 24px) / 2);
+  }
 }
 
 .skills-item-title {
@@ -560,7 +579,6 @@ button {
     font-weight: 700;
     font-size: 36px;
     line-height: 1.1;
-    width: 396px;
   }
 }
 
@@ -573,12 +591,6 @@ button {
 @media only screen and (max-width: 1199px) {
   .skills-item-text {
     width: 264px;
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  .skills-item-text {
-    width: 396px;
   }
 }
 
@@ -629,6 +641,7 @@ button {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    row-gap: 64px;
   }
 }
 
@@ -637,6 +650,7 @@ button {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    row-gap: 72px;
   }
 }
 
@@ -794,7 +808,7 @@ button {
 
 @media only screen and (max-width: 767px) {
   .footer {
-    padding: 96px 15px;
+    padding: 96px 0;
   }
 }
 
@@ -804,18 +818,21 @@ button {
   align-items: baseline;
 }
 
-@media only screen and (max-width: 1199px) {
+@media only screen and (min-width: 768px) and (max-width: 1158px) {
   .footer-container {
     display: flex;
     flex-wrap: wrap;
-    padding: 0;
+    width: 582px;
   }
 }
 
 @media only screen and (max-width: 767px) {
   .footer-container {
     display: block;
-    padding: 0;
+    min-width: 320px;
+    max-width: 428px;
+    padding: 0 15px;
+    margin: 0 auto;
   }
 }
 
@@ -858,6 +875,13 @@ button {
 }
 
 .logo-footer {
+  font-family: Raleway, sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--color-logo);
   margin-bottom: 16px;
 }
 
@@ -1041,6 +1065,13 @@ button {
   padding: 24px;
 }
 
+@media only screen and (max-width: 427px) {
+  .modal {
+    width: calc(100% - 30px);
+    padding: 24px 16px 24px 16px;
+  }
+}
+
 .modal-btn {
   display: block;
   margin-left: auto;
@@ -1121,7 +1152,7 @@ button {
   display: block;
   margin-bottom: 16px;
   padding: 8px 16px;
-  width: 360px;
+  width: 100%;
   min-height: 120px;
   max-height: 180px;
   resize: vertical;
